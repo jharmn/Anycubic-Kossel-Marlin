@@ -500,7 +500,7 @@
 // Center-to-center distance of the holes in the diagonal push rods.
 #define DELTA_DIAGONAL_ROD 209 // mm (for magnetic arms)
 // height from z=0 to home position
-#define DELTA_HEIGHT 254.8 // get this value from auto calibrate
+#define DELTA_HEIGHT 258.09 // get this value from auto calibrate
 
 #define DELTA_ENDSTOP_ADJ { 0.00, 0.00, 0.00 } // get these from auto calibrate
 
@@ -591,9 +591,9 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, (96 * 1.00) } // 
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, (96 * 1.057) } // 
 //TODO: Heat extruder to 205C, mark 110mm of filament and extrude 100mm. Measure the difference and adjust the equation
-//TODO: Example, asking for 100mm gives 110mm, this is off by 10%. Equation would be (96 * 90) YOU RRETULTS WILL BE DIFFERENT
+//TODO: Example, asking for 100mm gives 110mm, this is off by 10%. Equation would be (96 * 90) YOU RESULTS WILL BE DIFFERENT
 
 /**
  * Default Max Feed Rate (mm/s)
