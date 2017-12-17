@@ -500,18 +500,18 @@
 // Center-to-center distance of the holes in the diagonal push rods.
 #define DELTA_DIAGONAL_ROD 209 // mm (for magnetic arms)
 // height from z=0 to home position
-#define DELTA_HEIGHT 258.09 // get this value from auto calibrate
+#define DELTA_HEIGHT 257.6 //258.09 // get this value from auto calibrate
 
 #define DELTA_ENDSTOP_ADJ { 0.00, 0.00, 0.00 } // get these from auto calibrate
 
 // Horizontal offset from middle of printer to smooth rod center.
-#define DELTA_SMOOTH_ROD_OFFSET 170.0 // mm
+#define DELTA_SMOOTH_ROD_OFFSET 160.2 // 170.0 // mm
 
 // Horizontal offset of the universal joints on the end effector.
-#define DELTA_EFFECTOR_OFFSET 36.5 // mm 
+#define DELTA_EFFECTOR_OFFSET 26.3 //36.5 // mm 
 
 // Horizontal offset of the universal joints on the carriages.
-#define DELTA_CARRIAGE_OFFSET 33.9 // mm 
+#define DELTA_CARRIAGE_OFFSET 33 // 33.9 // mm 
 
 // Horizontal distance bridged by diagonal push rods when effector is centered.
 #define DELTA_RADIUS (DELTA_SMOOTH_ROD_OFFSET-(DELTA_EFFECTOR_OFFSET)-(DELTA_CARRIAGE_OFFSET)) //mm  (159) Get this value from auto calibrate
@@ -591,7 +591,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, (96 * 1.057) } // 
+#define DEFAULT_AXIS_STEPS_PER_UNIT { 80, 80, 80, (96 * 1.1) }  //{ 80, 80, 80, (96 * 1.1) } 
 //TODO: Heat extruder to 205C, mark 110mm of filament and extrude 100mm. Measure the difference and adjust the equation
 //TODO: Example, asking for 100mm gives 110mm, this is off by 10%. Equation would be (96 * 90) YOU RESULTS WILL BE DIFFERENT
 
@@ -608,7 +608,7 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 3000, 3000, 3000, 200 }
+#define DEFAULT_MAX_ACCELERATION      { 5000, 5000, 5000, 3000}
 
 /**
  * Default Acceleration (change/s) change = mm/s
@@ -618,9 +618,9 @@
  *   M204 R    Retract Acceleration
  *   M204 T    Travel Acceleration
  */
-#define DEFAULT_ACCELERATION          1000    // X, Y, Z and E acceleration for printing moves
-#define DEFAULT_RETRACT_ACCELERATION  1000    // E acceleration for retracts
-#define DEFAULT_TRAVEL_ACCELERATION   1000    // X, Y, Z acceleration for travel (non printing) moves
+#define DEFAULT_ACCELERATION          2000    // X, Y, Z and E acceleration for printing moves
+#define DEFAULT_RETRACT_ACCELERATION  2000    // E acceleration for retracts
+#define DEFAULT_TRAVEL_ACCELERATION   2000    // X, Y, Z acceleration for travel (non printing) moves
 
 /**
  * Default Jerk (mm/s)
@@ -630,10 +630,10 @@
  * When changing speed and direction, if the difference is less than the
  * value set here, it may happen instantaneously.
  */
-#define DEFAULT_XJERK                 7.0
-#define DEFAULT_YJERK                 7.0
-#define DEFAULT_ZJERK                 7.0 //Must be same XY for Delta
-#define DEFAULT_EJERK                 7.0
+#define DEFAULT_XJERK                 20.0
+#define DEFAULT_YJERK                 20.0
+#define DEFAULT_ZJERK                 20.0 //Must be same XY for Delta
+#define DEFAULT_EJERK                 5.0
 
 //===========================================================================
 //============================= Z Probe Options =============================
